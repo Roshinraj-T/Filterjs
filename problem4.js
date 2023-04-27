@@ -47,6 +47,23 @@ items=[
     {names:"apple",category:"fruit"},
     {names:"orange",category:"fruit"}
 ]
-unique='veg'
-character=items.filter((e)=>e.category===unique)
-console.log(character)
+// unique='veg'
+// uniquecategory=items.filter((e)=>e.category==='veg')
+// console.log(uniquecategory); 
+mappeditems=[]
+obj={}
+items.map((e)=>{
+    if(!(e.category in obj)){
+        obj[e.category]=[]
+    }
+    obj[e.category].push(e)
+    
+})
+// console.log(obj.veg)
+// mappeditems.push(obj)
+// console.log(mappeditems);
+// unique=mappeditems.filter((e)=>Object.keys(e)==='veg')
+// console.log(unique);
+// console.log(Object.keys(items));
+// character=mappeditems.find((e)=>mappeditems.includes(e))
+// console.log(character.fruit)
