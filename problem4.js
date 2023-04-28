@@ -41,24 +41,13 @@
 
 
 
-items=[
-    {names:'brinjal',category:"veg"},
-    {names:"potato",category:"veg"},
-    {names:"apple",category:"fruit"},
-    {names:"orange",category:"fruit"}
-]
+
 // unique='veg'
 // uniquecategory=items.filter((e)=>e.category==='veg')
 // console.log(uniquecategory); 
-mappeditems=[]
-obj={}
-items.map((e)=>{
-    if(!(e.category in obj)){
-        obj[e.category]=[]
-    }
-    obj[e.category].push(e)
-    
-})
+// mappeditems=[]
+
+
 // console.log(obj.veg)
 // mappeditems.push(obj)
 // console.log(mappeditems);
@@ -67,3 +56,27 @@ items.map((e)=>{
 // console.log(Object.keys(items));
 // character=mappeditems.find((e)=>mappeditems.includes(e))
 // console.log(character.fruit)
+
+
+
+items=[
+    {names:'brinjal',category:"veg"},
+    {names:"potato",category:"veg"},
+    {names:"apple",category:"fruit"},
+    {names:"orange",category:"fruit"}
+]
+category=items.map((e)=>e.category)
+
+unique = category.filter((e)=>unique(e))
+seperate=[]
+console.log(unique);
+function unique(str){    
+    if(!(seperate.includes(str))){
+        seperate.push(str)
+        return true
+    }
+    else{
+        return false
+    }
+    
+}
